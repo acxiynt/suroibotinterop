@@ -18,7 +18,6 @@ EXPORT unsigned char create(const char* path, const char* name, const unsigned c
     {
         perror("allowcation error");
         return 1;
-
     }
 
     if(*path == '\0')
