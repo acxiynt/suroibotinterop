@@ -38,16 +38,16 @@ EXPORT unsigned char create(const char* path, const char* name, const unsigned c
     if(!file)
     {
         perror("error opening fstream");
-        return 1;
+        return 0;
     }
     if(!fwrite(data, dataLength, 1, file))
     {
         perror("failed to write data");
-        return 1;
+        return 0;
     }
 
     fclose(file);
     free(combinedPath);
 
-    return 0;
+    return 1;
 } 
